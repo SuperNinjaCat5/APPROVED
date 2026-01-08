@@ -13,11 +13,13 @@ extends Node
 var options = [ # [resources,wealth,happiness,population
 	{
 		"text": "Comrade, approval to build a new factory?",
-		"results": [-10,15,-5,2]
+		"approved_results": [-10,15,-5,2],
+		"disapproved_results": [0,0,0,0]
 	},
 	{
 		"text": "Yo man, I need some moneyyyyyyy",
-		"results": [0,-5,0,2]
+		"approved_results": [0,-5,0,2],
+		"disapproved_results": [0,0,0,0]
 	}
 ]
 
@@ -33,7 +35,7 @@ func _ready() -> void:
 	random_question = options.pick_random()
 	
 	prombt.text = random_question["text"]
-
+	
 func updateValues(values) -> void:
 	resources += values[0]
 	wealth += values[1]
