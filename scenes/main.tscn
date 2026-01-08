@@ -11,6 +11,7 @@ offset_left = -414.0
 offset_top = -250.0
 offset_right = -364.0
 offset_bottom = 250.0
+fill_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="camera" type="Camera2D" parent="."]
@@ -21,6 +22,7 @@ offset_left = 414.0
 offset_top = -250.0
 offset_right = 464.0
 offset_bottom = 250.0
+fill_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="wealthBar" type="ProgressBar" parent="."]
@@ -29,6 +31,7 @@ offset_left = -316.0
 offset_top = -250.0
 offset_right = -266.0
 offset_bottom = 250.0
+fill_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="happinessBar" type="ProgressBar" parent="."]
@@ -37,6 +40,7 @@ offset_left = 316.0
 offset_top = -250.0
 offset_right = 366.0
 offset_bottom = 250.0
+fill_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="timeout" type="Timer" parent="."]

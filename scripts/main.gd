@@ -34,8 +34,27 @@ func _ready() -> void:
 	
 	prombt.text = random_question["text"]
 
-
+func updateValues(values) -> void:
+	resources += values[0]
+	wealth += values[1]
+	happiness += values[2]
+	population += values[3]
+		
+	resources = clamp(resources, 0, 100)
+	wealth = clamp(wealth, 0, 100)
+	happiness = clamp(happiness, 0, 100)
+	population = clamp(population, 0, 100)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if (resources <= 0 or wealth <= 0 or happiness <= 0 or population <= 0):
+		prombt.text = "Game over"
+		return
+		
+	resources_bar.value = resources
+	wealth_bar.value = wealth
+	happiness_bar.value = happiness
+	population_bar.value = population
+
+	
+	
